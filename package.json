@@ -55,7 +55,7 @@
     "check:all": "yarn check:lint && yarn check:format",
     "generate:v2": "graphql-codegen --config src/apollo/codegen.yml",
     "start": "netlify functions:serve",
-    "build": "netlify build",
+    "build": "netlify dev",
     "ts-check": "tsc --noEmit --lib ES2015 ./src/*.ts"
   }
 }
