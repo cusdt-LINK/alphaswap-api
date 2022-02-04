@@ -18,6 +18,6 @@ included_files = ["functions/**"]
   publish = "."
 
 [[redirects]]
-  from = "/api/*"
+  from = "/*"
   to = "/.netlify/functions/:splat"
   status = 200
