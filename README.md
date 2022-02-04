@@ -1,3 +1,6 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/879a56ce-952d-4201-8d55-92e56772c53a/deploy-status)](https://app.netlify.com/sites/lucid-keller-294a67/deploys)
+
+
 # AlphaSwap API
 
 The AlphaSwap API is a set of endpoints to be used by market aggregators (e.g. coinmarketcap.com) to surface AlphaSwap trade, liquidity and volume information. All information is fetched from the underlying subgraphs.
