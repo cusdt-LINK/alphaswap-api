@@ -1,6 +1,5 @@
 [build]
   functions = "./src"
-  command = "npm run build"
   publish = "functions"
 
 [functions]
