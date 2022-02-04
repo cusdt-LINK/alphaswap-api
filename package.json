@@ -1,0 +1,61 @@
+{
+  "name": "@alphaswap/api",
+  "license": "GPL-3.0-or-later",
+  "engines": {
+    "node": "12.x"
+  },
+  "dependencies": {
+    "@ethersproject/address": "^5.0.0-beta.125",
+    "@netlify/esbuild": "^0.13.6",
+    "@netlify/functions": "^0.11.0",
+    "@netlify/zip-it-and-ship-it": "^5.5.2",
+    "apollo-cache-inmemory": "^1.6.2",
+    "apollo-client": "^2.6.3",
+    "apollo-link-http": "^1.5.15",
+    "bignumber.js": "^9.0.0",
+    "esbuild": "^0.14.18",
+    "fetch": "^1.1.0",
+    "graphql": "^15.3.0",
+    "graphql-tag": "^2.10.1",
+    "netlify-cli": "^8.14.1",
+    "netlify-lambda": "^2.0.15",
+    "node-fetch": "^2.6.0",
+    "serverless-offline": "^8.2.0",
+    "tsc": "^2.0.4",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "devDependencies": {
+    "@babel/preset-typescript": "^7.16.7",
+    "@graphql-codegen/cli": "1.15.4",
+    "@graphql-codegen/typescript": "1.15.4",
+    "@graphql-codegen/typescript-operations": "^1.15.4",
+    "@types/aws-lambda": "^8.10.92",
+    "@types/node": "^17.0.14",
+    "@types/node-fetch": "^2.3.7",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "babel-core": "^6.26.3",
+    "eslint": "^5.0.0",
+    "eslint-config-prettier": "^6.0.0",
+    "prettier": "^1.18.2",
+    "serverless": "^1.75.1",
+    "serverless-api-gateway-caching": "^1.4.1",
+    "serverless-content-encoding": "^1.1.0",
+    "serverless-plugin-typescript": "^1.1.9",
+    "typescript": "^3.9.10"
+  },
+  "scripts": {
+    "lint:base": "yarn eslint ./src/**/*.ts",
+    "format:base": "yarn prettier ./src/**/*.ts",
+    "fix:lint": "yarn lint:base --fix",
+    "fix:format": "yarn format:base --write",
+    "fix:all": "yarn fix:lint && yarn fix:format",
+    "check:lint": "yarn lint:base",
+    "check:format": "yarn format:base --check",
+    "check:all": "yarn check:lint && yarn check:format",
+    "generate:v2": "graphql-codegen --config src/apollo/codegen.yml",
+    "start": "netlify functions:serve",
+    "build": "netlify build",
+    "ts-check": "tsc --noEmit --lib ES2015 ./src/*.ts"
+  }
+}

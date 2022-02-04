@@ -1,0 +1,24 @@
+[build]
+  functions = "./functions"
+  command = "npm run build"
+  publish = "functions"
+
+[functions]
+  node_bundler = "esbuild"
+
+#include all node modules in all functions
+
+  external_node_modules = ["@ethersproject/address", "apollo-cache-inmemory", "apollo-client", "apollo-link-http", 
+"bignumber.js", "graphql", "graphql-tag", "node-fetch", "serverless-offline", "@types/aws-lambda"]
+
+#include all files in all functions
+
+included_files = ["functions/**"]
+
+[dev]
+  publish = "."
+
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
