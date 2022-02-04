@@ -93,7 +93,7 @@ Results are edge cached for 1 minute.
 }
 ```
 
-## `/orderbook/:pair`
+## `/orderbook?pair=`
 
 Returns simulated orderbook data for the given AlphaSwap pair.
 Since AlphaSwap has a continuous orderbook, fixed amounts in an interval are chosen for bids and asks, 
