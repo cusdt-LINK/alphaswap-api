@@ -18,7 +18,7 @@ The API uses the [serverless framework](https://serverless.com) and can easily b
 All AlphaSwap pairs consist of two different tokens. KCS is represented only by WKCS in the api pairs.
 
 
-## [`/api/summary`]({host}/api/summary)
+## [`/summary`]({host}/summary)
 
 Returns data for the top ~1000 AlphaSwap pairs, sorted by reserves. 
 Results are edge cached for 15 minutes.
@@ -40,14 +40,14 @@ Results are edge cached for 15 minutes.
 }
 ```
 
-## [`/api/assets`]({host}/api/assets)
+## [`/assets`]({host}/assets)
 
 Returns the tokens in the top ~1000 pairs on AlphaSwap, sorted by reserves. 
 Results are edge cached for 24 hours.
 
 ### Request
 
-`GET {host}/api/assets`
+`GET {host}/assets`
 
 ### Response
 
@@ -65,14 +65,14 @@ Results are edge cached for 24 hours.
 }
 ```
 
-## [`/api/tickers`]({host}/api/tickers)
+## [`/tickers`]({host}/tickers)
 
 Returns data for the top ~1000 AlphaSwap pairs, sorted by reserves.
 Results are edge cached for 1 minute.
 
 ### Request
 
-`GET {host}/api/tickers`
+`GET {host}/tickers`
 
 ### Response
 
@@ -93,7 +93,7 @@ Results are edge cached for 1 minute.
 }
 ```
 
-## `/api/orderbook/:pair`
+## `/orderbook/:pair`
 
 Returns simulated orderbook data for the given AlphaSwap pair.
 Since AlphaSwap has a continuous orderbook, fixed amounts in an interval are chosen for bids and asks, 
@@ -102,7 +102,7 @@ Results are edge cached for 240 minutes.
 
 ### Request
 
-`GET {host}/api/orderbook?pair=`
+`GET {host}/orderbook?pair=`
 
 ### URL Parameters
 
@@ -126,7 +126,7 @@ Results are edge cached for 240 minutes.
 }
 ```
 
-## `/api/trades?pair=`
+## `/trades?pair=`
 
 Returns all swaps in the last 24 hours for the given AlphaSwap pair. 
 Results are edge cached for 15 minutes.
@@ -143,7 +143,7 @@ trade types (types `"???"` and `"borrow-both"`).
 
 ### Request
 
-`GET {host}/api/trades?pair=`
+`GET {host}/trades?pair=`
 
 ### Response
 
