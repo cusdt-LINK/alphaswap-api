@@ -1,5 +1,5 @@
 [build]
-  functions = "./src"
+  functions = "./functions"
   publish = "functions"
 
 [functions]
