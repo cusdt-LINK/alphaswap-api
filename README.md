@@ -25,7 +25,7 @@ Results are edge cached for 15 minutes.
 
 ### Request
 
-`GET {host}/api/summary`
+`GET {host}/summary`
 
 ### Response
 
